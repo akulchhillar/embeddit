@@ -36,11 +36,6 @@ def update_font():
     else:
         state["font-style"] = "font-mono"
         
-def copy_embed_code():
-    pyperclip.copy(code)
-    st.toast('Code Copied', icon='😍')
-
-
 if state["flag"]==False:
     get_random_quote()
 
@@ -78,12 +73,19 @@ with sidebar:
     gd.text_input(label="",label_visibility="hidden",placeholder="Title",key="Title")
     gd.text_input(label="",label_visibility="hidden",placeholder="https://example.com/intresting-article",key="URL")
     gd.toggle('Monospace',on_change=update_font,value=True)
-    gd.button("Copy Embed Code",on_click=copy_embed_code)
+    with st.expander("View Embed Code"):
+        
+        st.code(code,language="HTML",line_numbers=True)
+
 
 st.header('Embeddit: Text Snippets, Your Way!')
 st.caption('Craft Minimalist Shareable Embeds from Online Text Sources')
 
+
+
 st.components.v1.html(code,width=1000, height=1000)
+
+
 
 
     
