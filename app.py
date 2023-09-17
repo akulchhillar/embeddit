@@ -51,8 +51,8 @@ code = f'''
     <div class="mt-2 flex flex-row justify-end">
         <img class="mt-2 h-8 w-8 rounded-full border-none" src="https://s2.googleusercontent.com/s2/favicons?domain_url={state["URL"]}&sz=64" alt="">
         <div class="flex flex-col w-1/2">
-        <p class="font-normal mx-4 truncate">{state["Author"]}</p>
-        <p class="font-thin mx-4 truncate ">{state["Title"]}</p>
+        <p class="font-normal mx-1 truncate">{state["Author"]}</p>
+        <p class="font-thin mx-1 truncate ">{state["Title"]}</p>
     </div>
    <div class=" m-2 w-1/2 flex flex-row justify-end">
     <a href="{state["URL"]}" target="_blank">
